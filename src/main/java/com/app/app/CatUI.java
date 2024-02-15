@@ -23,7 +23,7 @@ import java.util.List;
 @Route("")
 public class CatUI extends VerticalLayout {
 
-    private final String backendUrl = "http://catdatabase.eu-north-1.elasticbeanstalk.com";  // Replace with your actual backend URL
+    private final String backendUrl = "http://samer.eu-north-1.elasticbeanstalk.com";  // Replace with your actual backend URL
 
     private final Grid<Cat> catGrid = new Grid<>(Cat.class);
     private final TextField name = new TextField("Name");
