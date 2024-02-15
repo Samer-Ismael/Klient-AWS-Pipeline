@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Build phase"
+      - mvn clean package
+      - echo "Test phase"
+      - mvn test # Run your unit tests with Maven
+      - echo "Unit tests passed" # if the tests pass, proceed to deployment
+
+  post_build:
+    commands:
+      - echo "Deploying..." # Proceed to deployment if tests pass
+      - echo "Deployment complete!"
+
+artifacts:
+  files:
+    - target/Vaadin.jar
+  discard-paths: yes
